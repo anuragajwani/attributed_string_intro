@@ -17,6 +17,8 @@ struct ContentView: View {
                    This sentence is a link to Google.
                    """
         var attributedString = AttributedString(text)
+        let rangeOfBold = attributedString.range(of: "This sentence is bold.")!
+        attributedString[rangeOfBold].font = .boldSystemFont(ofSize: 17)
         return attributedString
     }()
 
