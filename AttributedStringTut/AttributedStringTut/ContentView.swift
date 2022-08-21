@@ -21,6 +21,8 @@ struct ContentView: View {
         attributedString[rangeOfBold].font = .boldSystemFont(ofSize: 17)
         let rangeOfItalic = attributedString.range(of: "This sentence is italicised.")!
         attributedString[rangeOfItalic].font = .italicSystemFont(ofSize: 17)
+        let rangeOfLargeFont = attributedString.range(of: "This sentence will be of a larger font size than the rest of the text.")!
+        attributedString[rangeOfLargeFont].font = .systemFont(ofSize: 23)
         return attributedString
     }()
 
