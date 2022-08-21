@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    let myText = """
-                 This text is to exemplify how NSAttributedStrings work.
-                 This sentence is bold.
-                 This sentence is italicised.
-                 This sentence will be of a larger font size than the rest of the text.
-                 This whole sentence is a link to Google.
-                 """
+    let myText: AttributedString = {
+        let text = """
+                   This text is to exemplify how NSAttributedStrings work.
+                   This sentence is bold.
+                   This sentence is italicised.
+                   This sentence will be of a larger font size than the rest of the text.
+                   This sentence is a link to Google.
+                   """
+        var attributedString = AttributedString(text)
+        return attributedString
+    }()
 
     var body: some View {
         Text(myText)
